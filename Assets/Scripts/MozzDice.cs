@@ -19,4 +19,25 @@ public class MozzDice : MonoBehaviour
 	{
 		
 	}
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (transform.parent == null)
+        {
+            //SetParent(col.gameObject.transform);
+            rb.velocity = Vector2.zero;
+        }
+    }
+    /*
+    public void SetParent(Transform parent) 
+    {
+        transform.rotation = Quaternion.identity;
+        Vector2 lastScale = transform.localScale;
+        transform.parent = parent;
+        transform.localScale = 
+            new Vector2(
+            lastScale.x / transform.parent.lossyScale.x,
+            lastScale.y / transform.parent.lossyScale.y);
+    }
+    */
 }

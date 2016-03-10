@@ -39,7 +39,7 @@ public class Bacon : MonoBehaviour
 	{
 		foreach (ContactPoint2D contact in col.contacts) 
 		{
-			if (contact.normal.y > 0.9f)
+			if (contact.normal.y > 0.5f)
 			{
 				grounded = true;
 				break;
